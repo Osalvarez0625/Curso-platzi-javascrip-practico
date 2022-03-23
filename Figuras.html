@@ -1,35 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <linkhref="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Figuras geometricas / Curso Practico de JavaScript en platzi</title>
-
     <style>
-        :root body {
-            margin: 0;
-            font-family: 'Quicksand', sans-serif;
-        }
+      :root {
+        --white: #ffffff;
+        --black: #000000;
+        --maroon: #5a071c;
+        --very-light-pink: #1708f0;
+        --text-input-field: #f7f7f7;
+        --hospital-green: #18cf31;
+        --Aqua: hsl(177, 77%, 49%);
+        --azul-oscuro: rgb(58, 10, 230);
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+      }
+      body {
+        margin: 0;
+        font-family: "Quicksand", sans-serif;
+      }
+
+      .title {
+        color: #18cf31;
+      }
+
+      .mayor {
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+
+    }
+      .div {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      width: 300px;
+    }
+
+    .form-container {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      width: none;
+      justify-items: center;
+      background-color: var(--Aqua);
+      border-radius: 20px;
+    }
+    .h1 {
+        color: #1708f0;
+        
+    }
+
+  
+
+    .sub {
+        color: #5a071c;
+    }
+
+    .next {
+      color: rebeccapurple;
+    }
+
+    .button1 {
+        color: #1708f0;
+        background-color: beige;
+        border-radius: 30px;
+    }
+
+    .button2 {
+        color: #1708f0;
+        background-color: beige;
+        border-radius: 30px;
+    }
+
+    .id {
+        color: red;
+        background-color: antiquewhite;
+        border-radius: 20px;
+        
+    }
+    
+
     </style>
+  </head>
 
-</head>
+  <body>
+      <div class="mayor">
 
-<body>
+        <div class="form-container">
+            <header>
+                <h1 class="h1">Figuras Geometricas</h1>
+                <p class="sub">Este es el primer taller del curso Practico de JavaScript</p>
+            </header>
+            <section>
+                <h2 class="next">Calcula el area del perimetro</h2>
+                <form>
+                <label for="InputCuadrado">
+                    Escribre Cuanto mide cada lado del cuadrado:
+                </label>
+                <input id="InputCuadrado" type="number" class="id" />
 
-    <h1>Figuras Geometricas
+                <button type="button" onclick="calcularPerimetroCuadrado()" class="button1">
+                    Calcular el perimetro
+                </button>
 
-    </h1>
-
-    <script src="./Figuras.js">
-
-    </script>
-
-</body>
-
+                <button type="button" onclick="calcularAreaCuadrado()" class="button2">
+                    Calcular el area
+                </button>
+                </form>
+            </section>
+        </div>
+    </div>    
+    <script src="./Figuras.js"></script>
+  </body>
 </html>
